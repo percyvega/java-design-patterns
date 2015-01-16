@@ -3,6 +3,9 @@ package com.percyvega.design_patterns._03_behavioral._11_visitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class App {
 
     private final static Logger logger = LoggerFactory.getLogger(App.class);
@@ -13,13 +16,15 @@ public class App {
         CountryElement americaElement = new AmericaElement();
         CountryElement italyElement = new ItalyElement();
 
-        WorldVisitor peruvianVisitor = new PeruvianVisitor();
-        WorldVisitor italianVisitor = new ItalianVisitor();
+        Collection<WorldVisitor> worldVisitors = new ArrayList<>();
+        worldVisitors.add(new PeruvianVisitor());
+        worldVisitors.add(new ItalianVisitor());
 
-        americaElement.accept(peruvianVisitor);
-        americaElement.accept(italianVisitor);
-
-        italyElement.accept(peruvianVisitor);
+        for (WorldVisitor worldVisitor : worldVisitors) {
+            americaElement.accept(worldVisitor);
+            System.out.println();
+            italyElement.accept(worldVisitor);
+        }
 
         logger.debug("Finishing main()");
 
