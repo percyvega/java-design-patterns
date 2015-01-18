@@ -6,7 +6,9 @@ package com.percyvega.design_patterns._03_behavioral._11_visitor;
 public interface WorldVisitor {
 
     void visit(ItalyElement italyElement);
+
     void visit(PeruElement peruElement);
+
     void visit(AmericaElement americaElement);
 
 }

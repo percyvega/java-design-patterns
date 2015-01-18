@@ -6,6 +6,7 @@ package com.percyvega.design_patterns._03_behavioral._04_iterator;
 public interface MyIterator<T> {
 
     public boolean hasNext();
+
     public T next();
 
 }
