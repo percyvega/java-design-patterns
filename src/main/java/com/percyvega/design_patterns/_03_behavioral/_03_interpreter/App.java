@@ -12,8 +12,7 @@ public class App {
     public static void main(String[] args) {
         logger.debug("Starting main()");
 
-        String digits = new String("2 5 6 1 8");
-        Context context = new Context(digits);
+        Context context = new Context("2 5 6 1 8");
 
         ArrayList<Expression> expressions = new ArrayList<>();
         expressions.add(new SpanishExpression());

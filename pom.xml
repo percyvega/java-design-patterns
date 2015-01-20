@@ -9,61 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>java-design-patterns</name>
-    <!-- <packaging>war</packaging> -->
 
     <properties>
         <java-version>1.7</java-version>
         <org.slf4j-version>1.7.7</org.slf4j-version>
     </properties>
 
-    <!-- Logging -->
     <dependencies>
-        <!-- Spring -->
-        <!-- <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>4.0.3.RELEASE</version>
-            <exclusions>
-                <!-- Exclude Commons Logging in favor of SLF4j -->
-        <!--    <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                    <version>20030203</version>
-                </exclusion>
-            </exclusions>
-        </dependency> -->
-
-        <!-- Apache Commons -->
-        <!-- <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>${commons-lang.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-io</artifactId>
-            <version></version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>2.0</version>
-        </dependency> -->
-
-        <!-- MySQL Connector Java -->
-        <!-- <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.30</version>
-        </dependency> -->
-
-        <!-- AspectJ -->
-        <!-- <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>1.6.10</version>
-        </dependency> -->
-
+        <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
@@ -83,24 +36,6 @@
             <version>6.1.1</version>
             <scope>test</scope>
         </dependency> -->
-
-        <!-- Date and Time -->
-        <!-- <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>${jodatime.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time-hibernate</artifactId>
-            <version>${jodatime-hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time-jsptags</artifactId>
-            <version>${jodatime-jsptags.version}</version>
-        </dependency> -->
-
     </dependencies>
 
     <build>

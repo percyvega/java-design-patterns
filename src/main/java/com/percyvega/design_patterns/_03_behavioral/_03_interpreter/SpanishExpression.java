@@ -42,6 +42,8 @@ public class SpanishExpression extends Expression {
                 case "9":
                     interpretation.append("nueve ");
                     break;
+                default:
+                    break;
             }
         }
 
