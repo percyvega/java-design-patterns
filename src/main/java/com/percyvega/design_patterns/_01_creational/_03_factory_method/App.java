@@ -8,7 +8,7 @@ public class App {
 
     private final static Logger logger = LoggerFactory.getLogger(App.class);
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) {
         logger.debug("Starting main()");
 
         Vehicle car = VehicleFactory.fabricate("car", 61.4);

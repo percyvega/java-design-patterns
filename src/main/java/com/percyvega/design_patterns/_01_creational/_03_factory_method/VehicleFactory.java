@@ -9,7 +9,7 @@ public class VehicleFactory {
     private static final double BICYCLE_TRAFFIC_FACTOR = .05;
     private static final double GLIDER_TRAFFIC_FACTOR = .01;
 
-    public static Vehicle fabricate(String vehicleType, double maxSpeed) throws ClassNotFoundException {
+    public static Vehicle fabricate(String vehicleType, double maxSpeed) {
         if (vehicleType.equalsIgnoreCase("car"))
             return new Car(maxSpeed * (1 - CAR_TRAFFIC_FACTOR));
         else if (vehicleType.equalsIgnoreCase("bicycle"))
@@ -17,6 +17,6 @@ public class VehicleFactory {
         else if (vehicleType.equalsIgnoreCase("glider"))
             return new Glider(maxSpeed * (1 - GLIDER_TRAFFIC_FACTOR));
         else
-            throw new ClassNotFoundException(vehicleType);
+            throw new IllegalArgumentException(vehicleType);
     }
 }
