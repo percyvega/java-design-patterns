@@ -1,9 +1,7 @@
-package com.percyvega.design_patterns._03_behavioral._03_interpreter;
+package com.percyvega.design_patterns._03_behavioral._08_state;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
 
 /**
  * Copyright 2015 Percy Vega
@@ -27,16 +25,14 @@ public class App {
     public static void main(String[] args) {
         logger.debug("Starting main()");
 
-        Context context = new Context("2 5 6 1 8");
-
-        ArrayList<Expression> expressions = new ArrayList<>();
-        expressions.add(new SpanishExpression());
-        expressions.add(new EnglishExpression());
-
-        for (Expression expression : expressions) {
-            expression.interpret(context);
-            logger.debug("Interpreted using " + expression.getClass().getSimpleName() + ": " + context.getOutput());
-        }
+        WaterContext waterContext = new WaterContext();
+        waterContext.setTemperature(WaterContext.Temperature.COLD);
+        waterContext.setTemperature(WaterContext.Temperature.HEAT);
+        waterContext.setTemperature(WaterContext.Temperature.EXTREME_COLD);
+        waterContext.setTemperature(WaterContext.Temperature.HEAT);
+        waterContext.setTemperature(WaterContext.Temperature.EXTREME_HEAT);
+        waterContext.setTemperature(WaterContext.Temperature.EXTREME_COLD);
+        waterContext.setTemperature(WaterContext.Temperature.COLD);
 
         logger.debug("Finishing main()");
 
