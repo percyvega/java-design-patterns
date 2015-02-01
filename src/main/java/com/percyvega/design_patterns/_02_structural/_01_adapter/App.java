@@ -34,9 +34,15 @@ public class App {
         prisoner.setLastName("Vega");
         prisoner.setBirthdate(LocalDateTime.of(1979, 8, 23, 7, 34, 12));
 
-        JailSystem.identifyPrisoner(prisoner);
+        PrisonerCharacteristics prisonerCharacteristics = new PrisonerCharacteristicsImpl();
+        prisonerCharacteristics.setBloodType("AB-negative");
+        prisonerCharacteristics.setEyeColor("Green");
+        prisonerCharacteristics.setHairColor("Blonde");
 
-        Patient patient = new PrisonerToPatientAdapter(prisoner);
+        JailSystem.identifyPrisoner(prisoner);
+        JailSystem.describePrisoner(prisonerCharacteristics);
+
+        Patient patient = new PatientAdapter(prisoner, prisonerCharacteristics);
 
         System.out.println();
 

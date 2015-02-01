@@ -15,21 +15,16 @@ package com.percyvega.design_patterns._02_structural._01_adapter;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public interface Patient {
+public interface PrisonerCharacteristics {
+    String getEyeColor();
 
-    long getPatientId();
+    String getHairColor();
 
-    void setPatientId(long patientId);
+    void setBloodType(String s);
 
-    String getFullName();
+    void setEyeColor(String green);
 
-    void setFullName(String fullName);
-
-    int getAge();
-
-    void setAge(int age);
+    void setHairColor(String blonde);
 
     String getBloodType();
-
-    void setBloodType(String bloodType);
 }

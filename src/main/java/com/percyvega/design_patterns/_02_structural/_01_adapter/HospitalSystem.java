@@ -27,6 +27,7 @@ public abstract class HospitalSystem {
         logger.debug("\tPatient Id: " + patient.getPatientId());
         logger.debug("\tFull name: " + patient.getFullName());
         logger.debug("\tAge: " + patient.getAge());
+        logger.debug("\tBlood Type: " + patient.getBloodType());
     }
 
 }

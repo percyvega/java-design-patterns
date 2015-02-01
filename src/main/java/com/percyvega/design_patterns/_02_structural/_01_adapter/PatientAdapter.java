@@ -19,12 +19,14 @@ import java.time.temporal.ChronoUnit;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class PrisonerToPatientAdapter implements Patient {
+public class PatientAdapter implements Patient {
 
-    private Prisoner prisoner;
+    private final PrisonerCharacteristics prisonerCharacteristics;
+    private final Prisoner prisoner;
 
-    public PrisonerToPatientAdapter(Prisoner prisoner) {
+    public PatientAdapter(Prisoner prisoner, PrisonerCharacteristics prisonerCharacteristics) {
         this.prisoner = prisoner;
+        this.prisonerCharacteristics = prisonerCharacteristics;
     }
 
     @Override
@@ -61,5 +63,15 @@ public class PrisonerToPatientAdapter implements Patient {
                 today.getYear() - age,
                 today.getMonth(),
                 today.getDayOfMonth(), 0, 0));
+    }
+
+    @Override
+    public String getBloodType() {
+        return prisonerCharacteristics.getBloodType();
+    }
+
+    @Override
+    public void setBloodType(String bloodType) {
+        prisonerCharacteristics.setBloodType(bloodType);
     }
 }
