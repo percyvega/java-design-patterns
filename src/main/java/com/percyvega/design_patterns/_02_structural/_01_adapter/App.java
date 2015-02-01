@@ -1,7 +1,10 @@
-package com.percyvega.design_patterns._03_behavioral._10_template_method;
+package com.percyvega.design_patterns._02_structural._01_adapter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.text.ParseException;
+import java.time.LocalDateTime;
 
 /**
  * Copyright 2015 Percy Vega
@@ -22,28 +25,24 @@ public class App {
 
     private final static Logger logger = LoggerFactory.getLogger(App.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         logger.debug("Starting main()");
 
-        System.out.println();
+        Prisoner prisoner = new PrisonerImpl();
+        prisoner.setPrisonerId(954);
+        prisoner.setFirstName("Percy");
+        prisoner.setLastName("Vega");
+        prisoner.setBirthdate(LocalDateTime.of(1979, 8, 23, 7, 34, 12));
 
-        UniversityClass onSiteClass = new OnSiteClass();
-        onSiteClass.attend();
+        JailSystem.identifyPrisoner(prisoner);
 
-        System.out.println();
-
-        UniversityClass liveOnlineClass = new LiveOnlineClass();
-        liveOnlineClass.attend();
-
-        System.out.println();
-
-        UniversityClass prerecordedOnlineClass = new PrerecordedOnlineClass();
-        prerecordedOnlineClass.attend();
+        Patient patient = new PrisonerToPatientAdapter(prisoner);
 
         System.out.println();
+
+        HospitalSystem.logPatient(patient);
 
         logger.debug("Finishing main()");
-
     }
 
 }
