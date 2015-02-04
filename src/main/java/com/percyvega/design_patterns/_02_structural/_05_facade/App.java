@@ -27,7 +27,8 @@ public class App {
     public static void main(String[] args) throws ParseException {
         logger.debug("Starting main()");
 
-        logger.debug("Starting to prepare a three course meal without facade.");
+        logger.debug("--------------------------------------------------------------");
+        logger.debug("Starting to prepare a three course meal WITHOUT facade.");
         Dish starter = new Starter();
         starter.mixIngredients();
         starter.putInSmallDishware();
@@ -43,21 +44,26 @@ public class App {
         dessert.addSweetIngredients();
         dessert.putInGlassDishware();
         dessert.serve();
-        logger.debug("Three course meal has been served without facade.");
+        logger.debug("Three course meal has been served WITHOUT facade.");
+        logger.debug("--------------------------------------------------------------");
 
         System.out.println();
 
-        logger.debug("Starting to prepare a three course meal with facade.");
-        MealFacade meal01 = new MealFacade(new Starter(), new MainDish(), new Dessert());
+        logger.debug("--------------------------------------------------------------");
+        logger.debug("Starting to prepare a three course meal WITH facade.");
+        MealFacadeImpl meal01 = new MealFacadeImpl(new Starter(), new MainDish(), new Dessert());
         meal01.serve();
-        logger.debug("Three course meal has been served with facade.");
+        logger.debug("Three course meal has been served WITH facade.");
+        logger.debug("--------------------------------------------------------------");
 
         System.out.println();
 
-        logger.debug("Starting to prepare a two course meal with facade.");
-        MealFacade meal02 = new MealFacade(new MainDish(), new Dessert());
+        logger.debug("--------------------------------------------------------------");
+        logger.debug("Starting to prepare a two course meal WITH facade.");
+        MealFacadeImpl meal02 = new MealFacadeImpl(new MainDish(), new Dessert());
         meal02.serve();
-        logger.debug("Two course meal has been served with facade.");
+        logger.debug("Two course meal has been served WITH facade.");
+        logger.debug("--------------------------------------------------------------");
 
         logger.debug("Finishing main()");
     }

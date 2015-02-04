@@ -15,52 +15,6 @@ package com.percyvega.design_patterns._02_structural._05_facade;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class MealFacade {
-
-    private Dish starter;
-    private Dish mainDish;
-    private Dish dessert;
-
-    public MealFacade(Dish starter, Dish mainDish, Dish dessert) {
-        this.starter = starter;
-        this.mainDish = mainDish;
-        this.dessert = dessert;
-    }
-
-    public MealFacade(Dish dish01, Dish dish02) {
-        identifyAndInitialize(dish01);
-        identifyAndInitialize(dish02);
-    }
-
-    public MealFacade(Dish dish) {
-        identifyAndInitialize(dish);
-    }
-
-    private void identifyAndInitialize(Dish dish) {
-        if (dish instanceof Starter)
-            this.starter = dish;
-        else if (dish instanceof MainDish)
-            this.mainDish = dish;
-        else if (dish instanceof Dessert)
-            this.dessert = dish;
-    }
-
-    public void serve() {
-        if (starter != null) {
-            starter.mixIngredients();
-            starter.putInSmallDishware();
-            starter.serve();
-        }
-        if (mainDish != null) {
-            mainDish.addProteins();
-            mainDish.addCarbs();
-            mainDish.putInBigDishware();
-            mainDish.serve();
-        }
-        if (dessert != null) {
-            dessert.addSweetIngredients();
-            dessert.putInGlassDishware();
-            dessert.serve();
-        }
-    }
+public interface MealFacade {
+    void serve();
 }
