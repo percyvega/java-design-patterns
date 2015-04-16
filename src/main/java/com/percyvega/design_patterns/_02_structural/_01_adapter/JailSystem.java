@@ -31,6 +31,7 @@ public abstract class JailSystem {
     }
 
     public static void describePrisoner(PrisonerCharacteristics prisonerCharacteristics) {
+        logger.debug("Describing prisoner:");
         logger.debug("\tBlood Type: " + prisonerCharacteristics.getBloodType());
         logger.debug("\tEye Color: " + prisonerCharacteristics.getEyeColor());
         logger.debug("\tHair Color: " + prisonerCharacteristics.getHairColor());

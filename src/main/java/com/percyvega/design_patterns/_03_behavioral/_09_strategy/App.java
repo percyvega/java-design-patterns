@@ -25,8 +25,8 @@ public class App {
     public static void main(String[] args) {
         logger.debug("Starting main()");
 
-        CustomerContext customerCheckingOut1 = new CustomerContext("paypal.user@gmail.com", 25615.96);
-        CustomerContext customerCheckingOut2 = new CustomerContext("citi.user@gmail.com", 50000.37);
+        CustomerContext customerCheckingOut1 = new CustomerContext("paypaluser@gmail.com", 25615.96);
+        CustomerContext customerCheckingOut2 = new CustomerContext("citiuser@gmail.com", 50000.37);
 
         customerCheckingOut1.setPreferredPaymentMethod(new PayPalStrategy());
         customerCheckingOut2.setPreferredPaymentMethod(new CreditCardStrategy());
