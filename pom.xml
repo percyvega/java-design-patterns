@@ -11,7 +11,7 @@
     <name>java-design-patterns</name>
 
     <properties>
-        <java-version>1.8</java-version>
+        <java-version>17</java-version>
         <org.slf4j-version>1.7.7</org.slf4j-version>
     </properties>
 

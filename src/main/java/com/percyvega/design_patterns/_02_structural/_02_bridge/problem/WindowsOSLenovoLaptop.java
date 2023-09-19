@@ -1,4 +1,4 @@
-package com.percyvega.design_patterns._02_structural._02_bridge.solution;
+package com.percyvega.design_patterns._02_structural._02_bridge.problem;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,17 +18,20 @@ import org.slf4j.LoggerFactory;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class LenovoLT implements LT {
+public class WindowsOSLenovoLaptop extends WindowsOS implements LenovoLaptop {
 
-    private final static Logger logger = LoggerFactory.getLogger(LenovoLT.class);
+    private final static Logger logger = LoggerFactory.getLogger(WindowsOSLenovoLaptop.class);
 
     @Override
     public void restart() {
+        logger.debug("Calling Windows DLLs to restart...");
         logger.debug("Using Lenovo machine instructions to restart...");
     }
 
     @Override
     public void shutDown() {
+        logger.debug("Calling Windows DLLs to shut down...");
         logger.debug("Using Lenovo machine instructions to shut down...");
     }
+
 }

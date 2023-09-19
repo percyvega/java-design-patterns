@@ -18,20 +18,20 @@ import org.slf4j.LoggerFactory;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class LinuxOSLenovoLT extends LinuxOS implements LenovoLT {
+public class WindowsOSDellLaptop extends WindowsOS implements DellLaptop {
 
-    private final static Logger logger = LoggerFactory.getLogger(LinuxOSLenovoLT.class);
+    private final static Logger logger = LoggerFactory.getLogger(WindowsOSDellLaptop.class);
 
     @Override
     public void restart() {
-        logger.debug("Calling Linux process to restart...");
-        logger.debug("Using Lenovo machine instructions to restart...");
+        logger.debug("Calling Windows DLLs to restart...");
+        logger.debug("Using Dell machine instructions to restart...");
     }
 
     @Override
     public void shutDown() {
-        logger.debug("Calling Linux process to shut down...");
-        logger.debug("Using Lenovo machine instructions to shut down...");
+        logger.debug("Calling Windows DLLs to shut down...");
+        logger.debug("Using Dell machine instructions to shut down...");
     }
 
 }

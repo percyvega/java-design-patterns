@@ -22,19 +22,19 @@ public class WindowsOS extends OS {
 
     private final static Logger logger = LoggerFactory.getLogger(WindowsOS.class);
 
-    public WindowsOS(LT lt) {
-        super(lt);
+    public WindowsOS(Laptop laptop) {
+        super(laptop);
     }
 
     @Override
     public void restart() {
         logger.debug("Calling Windows DLLs to restart...");
-        lt.restart();
+        laptop.restart();
     }
 
     @Override
     public void shutDown() {
         logger.debug("Calling Windows DLLs to shut down...");
-        lt.shutDown();
+        laptop.shutDown();
     }
 }

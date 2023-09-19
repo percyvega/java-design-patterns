@@ -25,10 +25,10 @@ public class App {
     public static void main(String[] args) {
         logger.debug("Starting main()");
 
-        OS system1 = new LinuxOS(new DellLT());
-        OS system2 = new LinuxOS(new LenovoLT());
-        OS system3 = new WindowsOS(new DellLT());
-        OS system4 = new WindowsOS(new LenovoLT());
+        OS system1 = new LinuxOS(new DellLaptop());
+        OS system2 = new LinuxOS(new LenovoLaptop());
+        OS system3 = new WindowsOS(new DellLaptop());
+        OS system4 = new WindowsOS(new LenovoLaptop());
 
         system1.restart();
         system1.shutDown();

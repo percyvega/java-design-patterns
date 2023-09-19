@@ -24,7 +24,7 @@ public class BicycleBuilder extends VehicleBuilder {
 
     @Override
     protected void buildWheels() {
-        getVehicle().add(" + mountain rims + tires");
+        getVehicle().add(" + mountain rims, tires");
     }
 
     @Override

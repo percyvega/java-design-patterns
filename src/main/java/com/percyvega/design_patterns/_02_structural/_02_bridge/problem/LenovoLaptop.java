@@ -15,5 +15,5 @@ package com.percyvega.design_patterns._02_structural._02_bridge.problem;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public interface DellLT extends Laptop {
+public interface LenovoLaptop extends Laptop {
 }

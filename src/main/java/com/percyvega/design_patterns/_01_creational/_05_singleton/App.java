@@ -32,7 +32,7 @@ public class App {
         EarthBestSingleton earth02 = EarthBestSingleton.getInstance();
         logger.debug("Do earth01 and earth02 make reference to the same object?: " + (earth01 == earth02));
 
-        // A second good way is using an uninstantiatable class with an implicitly lazy-initialized property
+        // A second good way is using an un-instantiatable class with an implicitly lazy-initialized property
         EarthExcellentSingleton earth03 = EarthExcellentSingleton.getInstance();
         EarthExcellentSingleton earth04 = EarthExcellentSingleton.getInstance();
         logger.debug("Do earth03 and earth04 make reference to the same object?: " + (earth03 == earth04));

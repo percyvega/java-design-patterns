@@ -1,5 +1,8 @@
-package com.percyvega.design_patterns._02_structural._02_bridge.problem;
+package com.percyvega.design_patterns._02_structural._04_decorator;
 
+import com.percyvega.design_patterns._03_behavioral._09_strategy.CreditCardStrategy;
+import com.percyvega.design_patterns._03_behavioral._09_strategy.CustomerContext;
+import com.percyvega.design_patterns._03_behavioral._09_strategy.PayPalStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,20 +21,17 @@ import org.slf4j.LoggerFactory;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class WindowsOSLenovoLT extends WindowsOS implements LenovoLT {
+public class App {
 
-    private final static Logger logger = LoggerFactory.getLogger(WindowsOSLenovoLT.class);
+    private final static Logger logger = LoggerFactory.getLogger(App.class);
 
-    @Override
-    public void restart() {
-        logger.debug("Calling Windows DLLs to restart...");
-        logger.debug("Using Lenovo machine instructions to restart...");
-    }
+    public static void main(String[] args) {
+        logger.debug("Starting main()");
 
-    @Override
-    public void shutDown() {
-        logger.debug("Calling Windows DLLs to shut down...");
-        logger.debug("Using Lenovo machine instructions to shut down...");
+//        https://refactoring.guru/design-patterns/decorator
+
+        logger.debug("Finishing main()");
+
     }
 
 }

@@ -1,5 +1,8 @@
 package com.percyvega.design_patterns._02_structural._02_bridge.solution;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Copyright 2015 Percy Vega
  * <p/>
@@ -15,10 +18,18 @@ package com.percyvega.design_patterns._02_structural._02_bridge.solution;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public interface LT {
+public class LenovoLaptop implements
+    Laptop {
 
-    public void restart();
+    private final static Logger logger = LoggerFactory.getLogger(LenovoLaptop.class);
 
-    public void shutDown();
+    @Override
+    public void restart() {
+        logger.debug("Using Lenovo machine instructions to restart...");
+    }
 
+    @Override
+    public void shutDown() {
+        logger.debug("Using Lenovo machine instructions to shut down...");
+    }
 }

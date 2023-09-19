@@ -22,19 +22,19 @@ public class LinuxOS extends OS {
 
     private final static Logger logger = LoggerFactory.getLogger(LinuxOS.class);
 
-    public LinuxOS(LT lt) {
-        super(lt);
+    public LinuxOS(Laptop laptop) {
+        super(laptop);
     }
 
     @Override
     public void restart() {
         logger.debug("Calling Linux process to restart...");
-        lt.restart();
+        laptop.restart();
     }
 
     @Override
     public void shutDown() {
         logger.debug("Calling Linux process to shut down...");
-        lt.shutDown();
+        laptop.shutDown();
     }
 }

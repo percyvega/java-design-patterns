@@ -18,9 +18,9 @@ import org.slf4j.LoggerFactory;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class LinuxOSDellLT extends LinuxOS implements DellLT {
+public class LinuxOSDellLaptop extends LinuxOS implements DellLaptop {
 
-    private final static Logger logger = LoggerFactory.getLogger(LinuxOSDellLT.class);
+    private final static Logger logger = LoggerFactory.getLogger(LinuxOSDellLaptop.class);
 
     @Override
     public void restart() {

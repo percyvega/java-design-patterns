@@ -17,10 +17,10 @@ package com.percyvega.design_patterns._02_structural._02_bridge.solution;
  */
 public abstract class OS {
 
-    LT lt;
+    Laptop laptop;
 
-    public OS(LT lt) {
-        this.lt = lt;
+    public OS(Laptop laptop) {
+        this.laptop = laptop;
     }
 
     public abstract void restart();

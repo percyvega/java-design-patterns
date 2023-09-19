@@ -1,4 +1,4 @@
-package com.percyvega.design_patterns._02_structural._02_bridge.problem;
+package com.percyvega.design_patterns._02_structural._02_bridge.solution;
 
 /**
  * Copyright 2015 Percy Vega
@@ -15,5 +15,10 @@ package com.percyvega.design_patterns._02_structural._02_bridge.problem;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public interface LenovoLT extends Laptop {
+public interface Laptop {
+
+    public void restart();
+
+    public void shutDown();
+
 }

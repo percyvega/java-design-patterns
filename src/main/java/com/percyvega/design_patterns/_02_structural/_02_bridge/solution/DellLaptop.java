@@ -1,4 +1,7 @@
-package com.percyvega.design_patterns._01_creational._02_builder;
+package com.percyvega.design_patterns._02_structural._02_bridge.solution;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Copyright 2015 Percy Vega
@@ -15,25 +18,17 @@ package com.percyvega.design_patterns._01_creational._02_builder;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class TankBuilder extends VehicleBuilder {
+public class DellLaptop implements Laptop {
+
+    private final static Logger logger = LoggerFactory.getLogger(DellLaptop.class);
 
     @Override
-    protected void buildChassis() {
-        getVehicle().add(" + hull, turret");
+    public void restart() {
+        logger.debug("Using Dell machine instructions to restart...");
     }
 
     @Override
-    protected void buildWheels() {
-        getVehicle().add(" + metallic wheels, tracks");
-    }
-
-    @Override
-    protected void buildEntrance() {
-        getVehicle().add(" + hatch");
-    }
-
-    @Override
-    protected void buildColor() {
-        getVehicle().add(" + green paint");
+    public void shutDown() {
+        logger.debug("Using Dell machine instructions to shut down...");
     }
 }
